@@ -27,7 +27,7 @@ def query(q:str):
     results = collection.query(query_texts=[q], n_results=1)
     context = results["documents"][0][0] if results["documents"] else "No context found"
     
-    answer = ollama.generate(model="MODEL_NAME", prompt=f"Context: {context}\nQuestion: {q}\nAnswer clearly and concisely:")
+    answer = ollama.generate(model=MODEL_NAME, prompt=f"Context: {context}\nQuestion: {q}\nAnswer clearly and concisely:")
     return {"answer": answer["response"]}
 
 @app.post("/add")
