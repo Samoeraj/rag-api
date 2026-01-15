@@ -16,7 +16,7 @@ logging.info(f"Using model: {MODEL_NAME}")
 app = FastAPI()
 client = chromadb.PersistentClient(path="./db")
 collection = client.get_or_create_collection("docs")
-ollama_client = ollama.Client(host="http://host.docker.internal:11434")
+ollama_client = ollama.Client(host="http://localhost:11434")
 
 
 @app.get("/health")
