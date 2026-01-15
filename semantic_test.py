@@ -17,3 +17,6 @@ def test_kubernetes_query():
 if __name__ == "__main__":
     test_kubernetes_query()
     print("All semantic tests passed!")
+
+
+#This is a test to see if github actions is working
